@@ -14,7 +14,10 @@ int main() {
     int Populacao1;
     int PontosTuristicos1;
     float AreaEmKm1;
+    float DensiPop1;
     float PIB1;
+    float PIBPC1;
+
     // Variáveis da Carta 2
     char Estado2; 
     char CodigoDaCarta2[4];
@@ -22,7 +25,9 @@ int main() {
     int Populacao2;
     int PontosTuristicos2;
     float AreaEmKm2;
+    float DensiPop2;
     float PIB2;
+    float PIBPC2;
 
   // Área para entrada de dados
   // Entrada da Carta 1
@@ -43,8 +48,12 @@ int main() {
     printf("Digite a Área da Cidade da Carta 1 (Km²): ");
     scanf("%f", &AreaEmKm1);
 
+    DensiPop1 = (float) Populacao1 / AreaEmKm1;
+
     printf("Digite o PIB da Carta 1: ");
     scanf("%f", &PIB1);
+
+    PIBPC1 = (float) PIB1 / Populacao1;
 
     printf("Digite o Número de Pontos Turisticos da Cidade da Carta 1: ");
     scanf("%d", &PontosTuristicos1);
@@ -66,9 +75,13 @@ int main() {
 
     printf("Digite a Área da Cidade da Carta 2 (Km²): ");
     scanf("%f", &AreaEmKm2);
+    
+    DensiPop2 = (float) Populacao2 / AreaEmKm2;
 
     printf("Digite o PIB da Carta 2: ");
     scanf("%f", &PIB2);
+
+    PIBPC2 = (float) PIB2 / Populacao2;
 
     printf("Digite o Número de Pontos Turísticos da Cidade da Carta 2: ");
     scanf("%d", &PontosTuristicos2);
@@ -81,7 +94,9 @@ int main() {
     printf("Nome da Cidade: %s\n", NomeDaCidade1);
     printf("População: %d\n", Populacao1);
     printf("Área: %.2f Km²\n", AreaEmKm1);
+    printf("Densidade Populacional: %f\n", DensiPop1);
     printf("PIB: %.2f bilhões de reais\n", PIB1);
+    printf("PIB per Capia: %f\n", PIBPC1);
     printf("Número de Pontos Turísticos: %d\n", PontosTuristicos1);
 
     printf("\n --- CARTA 2 ---\n");
@@ -90,7 +105,9 @@ int main() {
     printf("Nome da Cidade: %s\n", NomeDaCidade2);
     printf("População: %d\n", Populacao2);
     printf("Área: %.2f Km²\n", AreaEmKm2);
+    printf("Densidade Populacional: %f\n", DensiPop2);
     printf("PIB: %.2f bilhões de reais\n", PIB2);
+    printf("PIB per Capia: %f\n", PIBPC2);
     printf("Número de Pontos Turísticos: %d\n", PontosTuristicos2);
 
 return 0;
